@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+    <style>
+    .content {
+    max-width: 500px;
+    margin: auto;
+    background: aqua;
+    }
+    .item{
+        font-size: medium;
+    }
+    </style>
+</head>
+<body bgcolor="LIGHTSALMON">
+<div class="content">
+    <h1 style="text-align:center;"><b>Login</b></h1>
+<form action="LoginServlet">
+    <pre class="item">
+    User:     <input type="text" placeholder="username" name="user"><br>
+    Password: <input type="password" placeholder="password" name="pwd" id="myInput"> <input type="checkbox" onclick="myFunction()">Show Password<br><br>
+                           <input align="center" type="submit"  value="login"> or <a href="Registration.html">Register</a>
+    </pre>
+</form>
+</div>
+<script>
+    function myFunction() {
+        const x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+    </script>
+</body>
+</html>
